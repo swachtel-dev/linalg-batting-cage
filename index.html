@@ -4517,7 +4517,7 @@ function showProblem() {
   // Render problem (supports prose+math and pure math; see build_problems.py
   // normalize_problem_or_answer for the source format contract).
   const probEl = document.getElementById('problem-display');
-  probEl.innerHTML = (item.problem || '').replace(/\n/g, '<br>');
+  probEl.innerHTML = '<div class="prose">' + (item.problem || '').replace(/\n/g, '<br>') + '</div>';
   renderMathInElement(probEl, {
     delimiters: [
       { left: '\\[', right: '\\]', display: true },
